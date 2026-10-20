@@ -28,7 +28,8 @@ Source: https://doi.org/10.24432/C5JW3Z
 Primary churn model:
 - Exclude Status as a conservative feature-governance choice.
 - Exclude Customer Value from the primary predictor set.
-- Audit the remaining 11 predictors before freezing preprocessing.
+- Exclude Age because it duplicates Age Group in the observed dataset.
+- Audit the remaining 10 predictors before freezing preprocessing.
 
 Status will be examined separately in a sensitivity analysis.
 
