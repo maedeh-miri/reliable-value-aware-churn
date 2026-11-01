@@ -1,6 +1,6 @@
 ﻿# Split Protocol — Version 1
 
-Status: Frozen candidate, pending Git review.
+Status: Frozen in commit 64e2a0d.
 
 ## Objective
 
@@ -72,7 +72,7 @@ CSV's byte-level identity and row order matter.
 Run from the project root with the required dependencies installed:
 
 python experiments/create_split_manifest.py
-python experiments/validate_split_manifest.py
+.\.venv\Scripts\python.exe -m experiments.validate_split_manifest
 
 Validation checks:
 - Source data SHA-256

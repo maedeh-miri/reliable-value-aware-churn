@@ -18,7 +18,7 @@ DOI: https://doi.org/10.24432/C5JW3Z
 
 ## Current status
 
-Exploratory data and feature-semantics audits are in progress.
+Data audits, feature governance, and the frozen group-aware v1 split are complete. Reproducible environment documentation and automated validation tests have been added. Model development has not started.
 
 ## Reproducing the initial audits
 
@@ -32,3 +32,43 @@ python experiments/feature_semantics_audit.py
 The dataset does not provide observed retention-intervention outcomes.
 Any future intervention utility calculations will therefore rely on
 explicit simulation assumptions, not causal effect estimates.
+
+## Environment and validation
+
+Reference environment: Windows, Python 3.13.2.
+
+Direct dependencies are listed in `requirements.txt`.
+The recorded environment snapshot is in `requirements-lock.txt`.
+
+For setup and reproducibility limitations, see [Environment](docs/environment.md).
+
+### Install dependencies
+
+From the repository root:
+
+    .\.venv\Scripts\python.exe -m pip install -r requirements.txt
+
+### Validate the frozen split
+
+The original dataset must be available at `data/raw/iranian_churn.csv`.
+
+    .\.venv\Scripts\python.exe -m experiments.validate_split_manifest
+
+For the split design and limitations, see [Split Protocol](docs/split_protocol.md).
+
+### Run automated tests
+
+    .\.venv\Scripts\python.exe -m unittest discover -s tests -p "test_*.py" -v
+
+The tests use temporary synthetic data and do not modify the frozen v1 split.
+
+### Check installed dependencies
+
+    .\.venv\Scripts\python.exe -m pip check
+
+## Next steps
+
+- Establish leakage-aware model baselines.
+- Evaluate predictive performance and probability calibration.
+- Study value-aware retention decisions under limited budgets.
+- Assess decision stability and sensitivity to assumptions.
