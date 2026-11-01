@@ -18,7 +18,7 @@ DOI: https://doi.org/10.24432/C5JW3Z
 
 ## Current status
 
-Data audits, feature governance, and the frozen group-aware v1 split are complete. Reproducible environment documentation and automated validation tests have been added. A Train-only DummyClassifier baseline has been evaluated with group-aware cross-validation. Logistic Regression and probability calibration remain pending. See [Dummy Baseline](docs/dummy_baseline.md).
+Data audits, feature governance, and the frozen group-aware v1 split are complete. Reproducible environment documentation and automated validation tests have been added. A Train-only DummyClassifier baseline has been evaluated with group-aware cross-validation. An initial Logistic Regression baseline has also been evaluated with Train-only group-aware cross-validation. Probability calibration and final model selection remain pending. See [Dummy Baseline](docs/dummy_baseline.md) and [Logistic Baseline](docs/logistic_baseline.md).
 
 ## Reproducing the initial audits
 
