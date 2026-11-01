@@ -1,0 +1,27 @@
+{
+  "dataset_sha256": "395d04854ce6daa1cdee8ab820df5a90691de9277dbba72096b8b01a60a655d1",
+  "row_count": 3150,
+  "random_state": 42,
+  "n_splits": 5,
+  "sklearn_version": "1.9.1",
+  "pandas_version": "3.0.6",
+  "grouping_columns": [
+    "Call  Failure",
+    "Complains",
+    "Subscription  Length",
+    "Charge  Amount",
+    "Seconds of Use",
+    "Frequency of use",
+    "Frequency of SMS",
+    "Distinct Called Numbers",
+    "Age Group",
+    "Tariff Plan"
+  ],
+  "fold_to_split": {
+    "0": "train",
+    "1": "train",
+    "2": "train",
+    "3": "calibration",
+    "4": "test"
+  }
+}
