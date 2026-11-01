@@ -18,7 +18,7 @@ DOI: https://doi.org/10.24432/C5JW3Z
 
 ## Current status
 
-Data audits, feature governance, and the frozen group-aware v1 split are complete. Reproducible environment documentation and automated validation tests have been added. Model development has not started.
+Data audits, feature governance, and the frozen group-aware v1 split are complete. Reproducible environment documentation and automated validation tests have been added. A Train-only DummyClassifier baseline has been evaluated with group-aware cross-validation. Logistic Regression and probability calibration remain pending. See [Dummy Baseline](docs/dummy_baseline.md).
 
 ## Reproducing the initial audits
 
