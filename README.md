@@ -66,9 +66,26 @@ The tests use temporary synthetic data and do not modify the frozen v1 split.
 
     .\.venv\Scripts\python.exe -m pip check
 
+## Robustness and sensitivity analyses
+
+Four Train-only sensitivity analyses have been completed:
+
+- Complains ablation: removing Complains substantially reduced predictive performance.
+- Charge Amount encoding: numeric and one-hot representations produced similar results; numeric encoding is retained provisionally.
+- Age Group encoding: one-hot encoding performed modestly better than ordinal encoding.
+- Regularization sensitivity: C = 1.0 and C = 10.0 produced similar results; C = 1.0 is retained provisionally.
+
+All comparisons use group-aware cross-validation within Train.
+
+These findings support provisional modeling decisions. They do not establish causal relationships or statistical significance.
+
+The reserved Calibration and Test partitions have not been used.
+
+See [Robustness and Sensitivity Summary](docs/robustness_summary.md) for the consolidated findings and links to individual experiments.
+
 ## Next steps
 
-- Establish leakage-aware model baselines.
+- Review the provisional model configuration and define the probability-calibration protocol.
 - Evaluate predictive performance and probability calibration.
 - Study value-aware retention decisions under limited budgets.
 - Assess decision stability and sensitivity to assumptions.
